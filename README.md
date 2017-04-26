@@ -5,12 +5,12 @@ This service allows to send and receive a file on Amazon S3
 
 #### Recovering sources
 ```
-omposer require wamland/wam-amazon-s3-php:dev-master
+composer require wamland/wam-amazon-s3-php:dev-master
 ```
 
 #### Creation of the file containing the environment variables 
 ```
-cp .env_sammple.sh
+cp vendor/wamland/wam-amazon-s3-php/.env_sample.php .env.php
 vim .env.sh
 ```
 
@@ -134,5 +134,3 @@ try {
  */
 echo sprintf("<img src='%s'>", $media['@metadata']['effectiveUri']);
 ```
-
-

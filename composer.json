@@ -1,0 +1,28 @@
+{
+  "name": "wamland/wam-amazon-s3-php",
+  "description": "This service allows to send and receive a file on Amazon S3",
+  "licence": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "120DEV",
+      "email": "120@dev.nc"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "aws/aws-sdk-php": "^3.26"
+  },
+  "require-dev": {
+    "kahlan/kahlan": "^3.1"
+  },
+  "scripts": {
+    "test": "kahlan --reporter=verbose --src=src/app",
+    "coverage": "kahlan --reporter=verbose --coverage=4 --src=src/app"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/app/"
+    }
+  }
+}
