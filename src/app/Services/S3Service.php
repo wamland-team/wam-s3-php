@@ -170,6 +170,10 @@ class S3Service
                     'SourceFile'  => $this->file,
                     'ContentType' => $contentType,
                     'ACL'         => AWS_ACL,
+                    "Metadata"      => [
+                        "Content-MD5" => base64_encode($this->file)
+                    ],
+                    "ContentSHA256" => hash_file("sha256", $this->file)
                 ]
             );
         } catch (\Exception $e) {
